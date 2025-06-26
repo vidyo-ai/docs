@@ -11,45 +11,203 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Help Center",
+        "tab": "Getting Started",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Overview",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "import",
-            "pages": [
-              "import/import",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "getting-started/introduction-to-quso",
+              "getting-started/things-you-should-set-up-first",
+              "getting-started/email-login"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "ClipAnything",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "ClipAnything",
             "pages": [
-              "api-reference/introduction"
+              "clipanything/what-is-clipanything",
+              "clipanything/how-to-use-clipanything",
+              "clipanything/prompts-manual",
+              "clipanything/faq"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Submit Your Videos",
+        "groups": [
           {
-            "group": "Endpoint Examples",
+            "group": "Submit Your Videos",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "submit-your-videos/video-sources-supported",
+              "submit-your-videos/video-length-supported",
+              "submit-your-videos/video-languages-supported",
+              "submit-your-videos/auto-import-your-latest-youtube-videos"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Customize Your Clips",
+        "groups": [
+          {
+            "group": "Customize Your Clips",
+            "pages": [
+              "customize-your-clips/how-to-add-brand-template",
+              "customize-your-clips/add-logo-and-custom-fonts",
+              "customize-your-clips/change-aspect-ratio",
+              "customize-your-clips/select-clip-length",
+              "customize-your-clips/clip-a-specific-timeframe",
+              "customize-your-clips/use-prompts-to-clip-specific-moments",
+              "customize-your-clips/translate-subtitles-to-another-language",
+              "customize-your-clips/brand-vocabulary"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Get Your Clips",
+        "groups": [
+          {
+            "group": "Get Your Clips",
+            "pages": [
+              "get-your-clips/how-many-clips-can-i-get",
+              "get-your-clips/reprocess-a-project",
+              "get-your-clips/get-your-clips-faq"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Edit Your Clips",
+        "groups": [
+          {
+            "group": "Edit Your Clips",
+            "pages": [
+              "edit-your-clips/adjust-layout",
+              "edit-your-clips/manual-reframe",
+              "edit-your-clips/change-captions",
+              "edit-your-clips/ai-emojis-keywords",
+              "edit-your-clips/trim-and-extend-the-video",
+              "edit-your-clips/add-text-overlays",
+              "edit-your-clips/add-transition-effects",
+              "edit-your-clips/clear-the-filler-words",
+              "edit-your-clips/ai-b-roll",
+              "edit-your-clips/ai-voiceover",
+              "edit-your-clips/add-intro-outro-cards",
+              "edit-your-clips/upload-custom-media-assets",
+              "edit-your-clips/add-music",
+              "edit-your-clips/keyboard-editing-shortcuts",
+              "edit-your-clips/rearrange-scenes-in-timeline",
+              "edit-your-clips/how-to-censor-curse-words"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Manage Your Clips",
+        "groups": [
+          {
+            "group": "Manage Your Clips",
+            "pages": [
+              "manage-your-clips/saving-your-projects",
+              "manage-your-clips/share-projects-with-collaborators",
+              "manage-your-clips/bulk-download",
+              "manage-your-clips/delete-a-project",
+              "manage-your-clips/cloud-storage"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Publish Your Projects",
+        "groups": [
+          {
+            "group": "Publish Your Projects",
+            "pages": [
+              "publish-your-projects/add-social-accounts",
+              "publish-your-projects/schedule-your-clips",
+              "publish-your-projects/customize-my-posts",
+              "publish-your-projects/scheduler-faq",
+              "publish-your-projects/connecting-your-youtube-channel-account",
+              "publish-your-projects/connecting-your-instagram-professional-account"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Export to XML",
+        "groups": [
+          {
+            "group": "Export to XML",
+            "pages": [
+              "export-to-xml/import-to-adobe-premiere-pro",
+              "export-to-xml/import-to-davinci-resolve"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Team Workspace",
+        "groups": [
+          {
+            "group": "Team Workspace",
+            "pages": [
+              "team-workspace/team-management"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Account Management",
+        "groups": [
+          {
+            "group": "Account Management",
+            "pages": [
+              "account-management/email-notification-settings"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Billing and Payment",
+        "groups": [
+          {
+            "group": "Billing and Payment",
+            "pages": [
+              "billing-and-payment/how-do-credits-work",
+              "billing-and-payment/plans",
+              "billing-and-payment/upgrade-downgrade",
+              "billing-and-payment/payments-billing-info"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API",
+        "groups": [
+          {
+            "group": "API",
+            "pages": [
+              "api/api-requests"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Other Questions",
+        "groups": [
+          {
+            "group": "Other Questions",
+            "pages": [
+              "other-questions/become-an-affiliate",
+              "other-questions/request-a-feature",
+              "other-questions/privacy-security",
+              "other-questions/editor-browser-use-faq"
             ]
           }
         ]
