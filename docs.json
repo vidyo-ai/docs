@@ -24,7 +24,9 @@
           {
             "group": "Importing Your Video",
             "pages": [
-              "import/import"
+              "articles/video-import-source",
+              "articles/video-length-types",
+              "articles/video-languages-supported"
                       ]
           }
         ]
