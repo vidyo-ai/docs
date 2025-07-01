@@ -16,9 +16,9 @@
           {
             "group": "Get Started",
             "pages": [
+              "index",
               "articles/setup-account",
-              "articles/email-login",
-              "development"
+              "articles/email-login"
             ]
           },
           {
