@@ -28,6 +28,13 @@
               "articles/video-length-types",
               "articles/video-languages-supported"
                       ]
+          },
+          {
+            "group": "Create Custom Clips",
+            "pages": [
+              "articles/custom-clip-timestamp",
+              "articles/custom-clip-transcript"
+                      ]
           }
         ]
       }
