@@ -35,6 +35,12 @@
               "articles/custom-clip-timestamp",
               "articles/custom-clip-transcript"
                       ]
+          },
+          {
+            "group": "Team Workspaces",
+            "pages": [
+              "articles/add-team-members"
+                      ]
           }
         ]
       }
