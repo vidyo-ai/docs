@@ -39,7 +39,8 @@
           {
             "group": "Team Workspaces",
             "pages": [
-              "articles/add-team-members"
+              "articles/add-team-members",
+              "articles/team-workspace-faq"
                       ]
           }
         ]
