@@ -42,6 +42,15 @@
               "articles/add-team-members",
               "articles/team-workspace-faq"
                       ]
+          },
+          {
+            "group": "Publish to Social Media",
+            "pages": [
+              "articles/connect-facebook-account",
+              "articles/connect-linkedin-account",
+              "articles/connect-pinterest-account",
+              "articles/connect-tiktok-account"
+                      ]
           }
         ]
       }
