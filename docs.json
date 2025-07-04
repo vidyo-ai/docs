@@ -47,6 +47,7 @@
           {
             "group": "Publish to Social Media",
             "pages": [
+              "articles/add-social-media-accounts",
               "articles/connect-facebook-account",
               "articles/connect-linkedin-account",
               "articles/connect-pinterest-account",
