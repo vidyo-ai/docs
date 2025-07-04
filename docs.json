@@ -30,8 +30,9 @@
                       ]
           },
           {
-            "group": "Create Custom Clips",
+            "group": "Customize Your Clips",
             "pages": [
+              "articles/add-music-to-clips",
               "articles/custom-clip-timestamp",
               "articles/custom-clip-transcript"
                       ]
