@@ -16,7 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "index",
+              "articles/introduction-to-quso",
               "articles/setup-account",
               "articles/how-credits-work",
               "articles/editor-faq"
@@ -28,7 +28,7 @@
               "articles/video-import-source",
               "articles/video-length-types",
               "articles/video-languages-supported"
-            ]
+                      ]
           },
           {
             "group": "Customize Your Clips",
