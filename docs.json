@@ -16,45 +16,45 @@
           {
             "group": "Get Started",
             "pages": [
-              "index",
-              "articles/setup-account",
-              "articles/how-credits-work",
-              "articles/editor-faq"
+              "help/index",
+              "help/articles/setup-account",
+              "help/articles/how-credits-work",
+              "help/articles/editor-faq"
             ]
           },
           {
             "group": "Importing Your Video",
             "pages": [
-              "articles/video-import-source",
-              "articles/video-length-types",
-              "articles/video-languages-supported"
-                      ]
+              "help/articles/video-import-source",
+              "help/articles/video-length-types",
+              "help/articles/video-languages-supported"
+            ]
           },
           {
             "group": "Customize Your Clips",
             "pages": [
-              "articles/add-music-to-clips",
-              "articles/custom-clip-timestamp",
-              "articles/custom-clip-transcript",
-              "articles/what-is-cutmagic",
-              "articles/editor-faq"
+              "help/articles/add-music-to-clips",
+              "help/articles/custom-clip-timestamp",
+              "help/articles/custom-clip-transcript",
+              "help/articles/what-is-cutmagic",
+              "help/articles/editor-faq"
                       ]
           },
           {
             "group": "Team Workspaces",
             "pages": [
-              "articles/add-team-members",
-              "articles/team-workspace-faq"
+              "help/articles/add-team-members",
+              "help/articles/team-workspace-faq"
                       ]
           },
           {
             "group": "Publish to Social Media",
             "pages": [
-              "articles/add-social-media-accounts",
-              "articles/connect-facebook-account",
-              "articles/connect-linkedin-account",
-              "articles/connect-pinterest-account",
-              "articles/connect-tiktok-account"
+              "help/articles/add-social-media-accounts",
+              "help/articles/connect-facebook-account",
+              "help/articles/connect-linkedin-account",
+              "help/articles/connect-pinterest-account",
+              "help/articles/connect-tiktok-account"
                       ]
           }
         ]
