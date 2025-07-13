@@ -16,10 +16,10 @@
           {
             "group": "Get Started",
             "pages": [
-              "helpdesk/articles/introduction-to-quso",
-              "helpdesk/articles/setup-account",
-              "helpdesk/articles/how-credits-work",
-              "helpdesk/articles/editor-faq"
+              "help/introduction-to-quso",
+              "help/setup-account",
+              "help/how-credits-work",
+              "help/editor-faq"
             ]
           },
           {
