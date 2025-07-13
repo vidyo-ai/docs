@@ -16,7 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "index",
+              "articles/welcome",
               "articles/setup-account",
               "articles/how-credits-work",
               "articles/editor-faq"
