@@ -56,6 +56,15 @@
               "help/connect-pinterest-account",
               "help/connect-tiktok-account"
                       ]
+          },
+          {
+            "group": "Accounts, Billing & Subscriptions",
+            "pages": [
+              "help/subscription-plans",
+              "help/upgrade-downgrade-plans",
+              "help/storage-management",
+              "help/download-invoice"
+                    ]
           }
         ]
       }
@@ -69,7 +78,7 @@
         },
         {
           "anchor": "Events",
-          "href": "https://quso.ai/events",
+          "href": "https://lu.ma/quso.ai",
           "icon": "slack"
         },
         {
