@@ -16,45 +16,45 @@
           {
             "group": "Get Started",
             "pages": [
-              "help/articles/introduction-to-quso",
-              "help/articles/setup-account",
-              "help/articles/how-credits-work",
-              "help/articles/editor-faq"
+              "articles/introduction-to-quso",
+              "articles/setup-account",
+              "articles/how-credits-work",
+              "articles/editor-faq"
             ]
           },
           {
             "group": "Importing Your Video",
             "pages": [
-              "help/articles/video-import-source",
-              "help/articles/video-length-types",
-              "help/articles/video-languages-supported"
+              "articles/video-import-source",
+              "articles/video-length-types",
+              "articles/video-languages-supported"
                       ]
           },
           {
             "group": "Customize Your Clips",
             "pages": [
-              "help/articles/add-music-to-clips",
-              "help/articles/custom-clip-timestamp",
-              "help/articles/custom-clip-transcript",
-              "help/articles/what-is-cutmagic",
-              "help/articles/editor-faq"
+              "articles/add-music-to-clips",
+              "articles/custom-clip-timestamp",
+              "articles/custom-clip-transcript",
+              "articles/what-is-cutmagic",
+              "articles/editor-faq"
                       ]
           },
           {
             "group": "Team Workspaces",
             "pages": [
-              "help/articles/add-team-members",
-              "help/articles/team-workspace-faq"
+              "articles/add-team-members",
+              "articles/team-workspace-faq"
                       ]
           },
           {
             "group": "Publish to Social Media",
             "pages": [
-              "help/articles/add-social-media-accounts",
-              "help/articles/connect-facebook-account",
-              "help/articles/connect-linkedin-account",
-              "help/articles/connect-pinterest-account",
-              "help/articles/connect-tiktok-account"
+              "articles/add-social-media-accounts",
+              "articles/connect-facebook-account",
+              "articles/connect-linkedin-account",
+              "articles/connect-pinterest-account",
+              "articles/connect-tiktok-account"
                       ]
           }
         ]
