@@ -16,7 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "help/introduction-to-quso",
+              "help/welcome-to-qusoai",
               "help/setup-account",
               "help/how-credits-work",
               "help/editor-faq"
