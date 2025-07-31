@@ -23,6 +23,16 @@
             ]
           },
           {
+            "group":"Top Features",
+            "pages":[
+              "help/what-is-ai-clips",
+              "help/what-is-ai-influencer",
+              "help/what-is-ai-video",
+              "help/what-is-viddy",
+              "help/what-is-cutmagic"
+            ]
+          },
+          {
             "group": "Importing Your Video",
             "pages": [
               "help/video-import-source",
@@ -65,7 +75,8 @@
               "help/subscription-plans",
               "help/upgrade-downgrade-plans",
               "help/storage-management",
-              "help/download-invoice"
+              "help/download-invoice",
+              "help/login-options"
                     ]
           }
         ]
