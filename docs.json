@@ -19,6 +19,7 @@
               "help/welcome-to-qusoai",
               "help/setup-account",
               "help/how-credits-work",
+              "help/general-faq",
               "help/editor-faq"
             ]
           },
@@ -43,7 +44,7 @@
           {
             "group": "Customize Your Clips",
             "pages": [
-              "help/add-music-to-clips",
+              "help/editor/add-music-to-clips",
               "help/custom-clip-timestamp",
               "help/custom-clip-transcript",
               "help/what-is-cutmagic",
@@ -66,7 +67,8 @@
               "help/connect-pinterest-account",
               "help/connect-tiktok-account",
               "help/connect-instagram-account",
-              "help/connect-youtube-account"
+              "help/connect-youtube-account",
+              "help/publish-external-content"
                       ]
           },
           {
@@ -76,7 +78,8 @@
               "help/upgrade-downgrade-plans",
               "help/storage-management",
               "help/download-invoice",
-              "help/login-options"
+              "help/login-options",
+              "help/payment-billing"
                     ]
           }
         ]
