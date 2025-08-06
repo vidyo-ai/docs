@@ -111,8 +111,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@quso.ai"
+        "label": "Raise Support Ticket",
+        "href": "https://help.quso.ai/hc/en-us/requests/new"
       }
     ],
     "primary": {
