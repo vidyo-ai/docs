@@ -100,6 +100,11 @@
           "anchor": "Blog",
           "href": "https://quso.ai/blog",
           "icon": "newspaper"
+        },
+        {
+          "anchor": "Contact Us",
+          "href": "https://help.quso.ai/hc/en-us/requests/new",
+          "icon": "headset"
         }
       ]
     }
@@ -111,7 +116,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Raise Support Ticket",
+        "label": "Contact Us",
         "href": "https://help.quso.ai/hc/en-us/requests/new"
       }
     ],
