@@ -103,7 +103,7 @@
         },
         {
           "anchor": "Contact Us",
-          "href": "https://help.quso.ai/hc/en-us/requests/new",
+          "href": "https://qusoai.frontkb.com/en/contact-us",
           "icon": "headset"
         }
       ]
@@ -117,7 +117,7 @@
     "links": [
       {
         "label": "Contact Us",
-        "href": "mailto:help@quso.ai?subject=Help%20Needed"
+        "href": "https://qusoai.frontkb.com/en/contact-us"
       }
     ],
     "primary": {
