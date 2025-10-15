@@ -117,7 +117,7 @@
     "links": [
       {
         "label": "Contact Us",
-        "href": "https://help.quso.ai/hc/en-us/requests/new"
+        "href": "mailto:help@quso.ai?subject=Help%20Needed"
       }
     ],
     "primary": {
