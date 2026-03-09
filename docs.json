@@ -9,6 +9,30 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Customer Stories",
+          "icon": "book-open-cover",
+          "href": "https://quso.ai/blog-category/customer-stories"
+        },
+        {
+          "anchor": "Events",
+          "icon": "microphone-stand",
+          "href": "https://lu.ma/quso.ai"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://quso.ai/blog"
+        },
+        {
+          "anchor": "Contact Us",
+          "icon": "headset",
+          "href": "https://qusoai.frontkb.com/en/contact-us"
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Help Center",
@@ -23,14 +47,15 @@
             ]
           },
           {
-            "group":"Top Features",
-            "pages":[
+            "group": "Top Features",
+            "pages": [
               "help/what-is-ai-clips",
               "help/what-is-ai-influencer",
               "help/what-is-ai-video",
               "help/how-to-use-ai-video-generator",
               "help/what-is-viddy",
-              "help/what-is-cutmagic"
+              "help/what-is-cutmagic",
+              "help/untitled-page"
             ]
           },
           {
@@ -39,7 +64,7 @@
               "help/video-import-source",
               "help/video-length-types",
               "help/video-languages-supported"
-                      ]
+            ]
           },
           {
             "group": "Customize Your Clips",
@@ -49,14 +74,14 @@
               "help/custom-clip-transcript",
               "help/what-is-cutmagic",
               "help/editor-faq"
-                      ]
+            ]
           },
           {
             "group": "Team Workspaces",
             "pages": [
               "help/add-team-members",
               "help/team-workspace-faq"
-                      ]
+            ]
           },
           {
             "group": "Publish to Social Media",
@@ -74,7 +99,7 @@
               "help/what-is-a-social-set",
               "help/how-to-post-instagram-carousel",
               "help/social-media-troubleshooting"
-                      ]
+            ]
           },
           {
             "group": "Accounts, Billing & Subscriptions",
@@ -85,35 +110,11 @@
               "help/download-invoice",
               "help/login-options",
               "help/payment-billing"
-                    ]
+            ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Customer Stories",
-          "href": "https://quso.ai/blog-category/customer-stories",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Events",
-          "href": "https://lu.ma/quso.ai",
-          "icon": "microphone-stand"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://quso.ai/blog",
-          "icon": "newspaper"
-        },
-        {
-          "anchor": "Contact Us",
-          "href": "https://qusoai.frontkb.com/en/contact-us",
-          "icon": "headset"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
