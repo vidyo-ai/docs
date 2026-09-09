@@ -119,7 +119,8 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://helpdesk.quso.ai/help/welcome-to-qusoai"
   },
   "navbar": {
     "links": [
