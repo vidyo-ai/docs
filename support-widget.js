@@ -44,7 +44,18 @@
       } catch (e) {}
       if (channel === "email") {
         try {
-          if (started) write(ph, "closed"); // a late render must not open chat after the mailto
+          if (started) {
+            write(ph, "closed");
+            // a late render must not open chat after the mailto: unmount it when it finally loads
+            var conv0 = ph.conversations;
+            var unhide = ph.on("eventCaptured", function (ev) {
+              if (!ev || (ev.event !== "$conversations_widget_loaded" && ev.event !== "$conversations_widget_state_changed")) return;
+              try {
+                unhide();
+                if (conv0.isVisible && conv0.isVisible()) conv0.hide();
+              } catch (e) {}
+            });
+          }
         } catch (e) {}
         capture(ph, "support_widget_failed", { entry_point: "help_center_link", reason: reason });
         window.location.href = MAILTO;
@@ -90,7 +101,13 @@
       } catch (e) {
         return finish("email", "error");
       }
-      if (ticks * TICK >= TIMEOUT) return finish("email", started ? "timeout" : "unavailable");
+      if (ticks * TICK >= TIMEOUT) {
+        // Opted-out capture suppresses the widget events: if the launcher is mounted, keep the widget.
+        try {
+          if (started && ph.has_opted_out_capturing && ph.has_opted_out_capturing() && conv.isVisible()) return finish("widget");
+        } catch (e) {}
+        return finish("email", started ? "timeout" : "unavailable");
+      }
       setTimeout(tick, TICK);
     }
     tick();
