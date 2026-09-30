@@ -1,54 +1,107 @@
 // Mintlify includes every .js in the repo on every page. Links to mailto:help@quso.ai (navbar
-// "Contact Us", sidebar anchor, article footers) open the PostHog Support widget when it is loaded
-// (integrations.posthog in docs.json); otherwise the mailto opens as before, so the link never dies.
+// "Contact Us", sidebar anchor, article footers) open the PostHog Support widget the way the app does
+// (helpers/support.ts): prime the stored panel state to "open", show(), and trust the widget's
+// $conversations_widget_loaded / _state_changed events (show() renders asynchronously). The click is
+// queued until PostHog/the widget is ready; the mailto opens only if the panel has not opened in 3 s.
 (function () {
   var MAILTO = "mailto:help@quso.ai";
+  var TIMEOUT = 3000;
+  var TICK = 100;
+  var attempt = false;
+
   function capture(ph, event, props) {
     try {
       if (ph && ph.capture) ph.capture(event, props);
     } catch (e) {}
   }
+  function keyOf(ph) {
+    return ph && ph.config && ph.config.token ? "ph_conv_" + ph.config.token : null;
+  }
+  function read(ph) {
+    var k = keyOf(ph);
+    if (!k) throw new Error("no token");
+    return JSON.parse(localStorage.getItem(k) || "{}");
+  }
+  function write(ph, state) {
+    var st = read(ph);
+    st.widgetState = state;
+    localStorage.setItem(keyOf(ph), JSON.stringify(st));
+  }
+
+  function open() {
+    var ticks = 0, started = false, retried = false, done = false, off = null;
+    function reopen(conv) {
+      if (conv.isVisible && conv.isVisible() && conv.hide) conv.hide();
+      conv.show();
+    }
+    function finish(channel, reason) {
+      if (done) return;
+      done = true;
+      attempt = false;
+      var ph = window.posthog;
+      try {
+        if (off) off();
+      } catch (e) {}
+      if (channel === "email") {
+        try {
+          if (started) write(ph, "closed"); // a late render must not open chat after the mailto
+        } catch (e) {}
+        capture(ph, "support_widget_failed", { entry_point: "help_center_link", reason: reason });
+        window.location.href = MAILTO;
+      }
+      capture(ph, "support_opened", { entry_point: "help_center_link", channel: channel });
+    }
+    function tick() {
+      if (done) return;
+      ticks += 1;
+      var ph = window.posthog;
+      var conv = ph && ph.conversations;
+      try {
+        if (conv && typeof conv.show === "function" && (!conv.isAvailable || conv.isAvailable()) && !started) {
+          var stored = null;
+          try {
+            stored = read(ph).widgetState || null;
+            if (stored === "open" && conv.isVisible && conv.isVisible()) return finish("widget"); // already open
+            write(ph, "open");
+          } catch (e) {
+            return finish("email", "storage"); // show() would restore a closed panel
+          }
+          started = true;
+          try {
+            off = ph.on("eventCaptured", function (ev) {
+              if (done || !ev) return;
+              if (ev.event === "$conversations_widget_loaded") {
+                if (ev.properties && ev.properties.initialState === "open") return finish("widget");
+                if (!retried) {
+                  retried = true; // init was already pending with the pre-primed state: open once more
+                  try {
+                    reopen(conv);
+                  } catch (e) {
+                    finish("email", "error");
+                  }
+                } else finish("email", "closed");
+              } else if (ev.event === "$conversations_widget_state_changed" && ev.properties && ev.properties.state === "open") {
+                finish("widget");
+              }
+            });
+          } catch (e) {}
+          reopen(conv);
+        }
+      } catch (e) {
+        return finish("email", "error");
+      }
+      if (ticks * TICK >= TIMEOUT) return finish("email", started ? "timeout" : "unavailable");
+      setTimeout(tick, TICK);
+    }
+    tick();
+  }
+
   document.addEventListener("click", function (ev) {
     var a = ev.target && ev.target.closest && ev.target.closest('a[href^="mailto:help@quso.ai"]');
     if (!a || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || ev.button > 0) return;
-    var ph = window.posthog;
-    var opening = false;
-    try {
-      var conv = ph && ph.conversations;
-      if (conv && typeof conv.show === "function" && (!conv.isAvailable || conv.isAvailable())) {
-        var primed = false;
-        var token = ph.config && ph.config.token;
-        if (token) {
-          try {
-            var key = "ph_conv_" + token;
-            var st = JSON.parse(localStorage.getItem(key) || "{}");
-            st.widgetState = "open";
-            localStorage.setItem(key, JSON.stringify(st));
-            primed = true;
-          } catch (e) {}
-        }
-        // Storage blocked: show() would restore a closed panel, so keep the mailto.
-        if (primed) {
-          if (conv.isVisible && conv.isVisible() && conv.hide) conv.hide();
-          conv.show();
-          opening = true;
-          // show() renders asynchronously: check the panel really appeared, else open the mailto.
-          setTimeout(function () {
-            var visible = true;
-            try {
-              visible = !conv.isVisible || conv.isVisible();
-            } catch (e) {}
-            if (!visible) {
-              capture(ph, "support_widget_failed", { entry_point: "help_center_link" });
-              window.location.href = MAILTO;
-            }
-          }, 1500);
-        }
-      }
-    } catch (e) {
-      opening = false;
-    }
-    capture(ph, "support_opened", { entry_point: "help_center_link", channel: opening ? "widget" : "email" });
-    if (opening) ev.preventDefault();
+    ev.preventDefault();
+    if (attempt) return; // repeated click while opening: no second open, no remount
+    attempt = true;
+    open();
   });
 })();
