@@ -1,0 +1,199 @@
+/* Port of apps/vidyo-ui/src/index.scss's PostHog Support widget (posthog.conversations) brand
+   override (vidyo-ui PR #2748 / main @ 7acc0951b1), verbatim plain CSS — no SCSS nesting to convert.
+   Mintlify includes any .css file in the content directory (this one, next to docs.json) on
+   every page automatically; no reference in docs.json is needed.
+   Without this file, the widget that support-widget.js opens on quso.ai/help renders with
+   PostHog's default unbranded styling instead of matching the app and landing (PR #90/#93).
+*/
+/* PostHog Support widget (posthog.conversations) brand override, owner-approved 2026-09-30.
+   Inline widget styles need !important. Scoped to #ph-conversations-widget-container. */
+#ph-conversations-widget-container,
+#ph-conversations-widget-container *:not(pre):not(code) {
+  font-family:
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif !important;
+}
+/* Panel */
+#ph-conversations-widget-container
+  > div
+  > div:has(> div:first-of-type > div > button),
+#ph-conversations-widget-container > div > div:has(textarea),
+#ph-conversations-widget-container > div > div:has(input) {
+  border-radius: 12px !important;
+  border: 1px solid rgba(37, 37, 33, 0.12) !important;
+  overflow: hidden !important;
+}
+/* Header: charcoal, Jessica avatar, title "Jessica from quso" */
+#ph-conversations-widget-container
+  > div
+  > div:has(> div:first-of-type > div > button)
+  > div:first-of-type,
+#ph-conversations-widget-container
+  > div
+  > div:has(textarea)
+  > div:first-of-type,
+#ph-conversations-widget-container > div > div:has(input) > div:first-of-type {
+  background: linear-gradient(#3a3a33, #252521) !important;
+  color: #fff !important;
+  padding: 12px 14px !important;
+  align-items: center !important;
+}
+#ph-conversations-widget-container
+  > div
+  > div:has(> div:first-of-type > div > button)
+  > div:first-of-type
+  button,
+#ph-conversations-widget-container
+  > div
+  > div:has(textarea)
+  > div:first-of-type
+  button,
+#ph-conversations-widget-container
+  > div
+  > div:has(input)
+  > div:first-of-type
+  button {
+  color: #fff !important;
+}
+/* Header content: hide the title <span> text ("Support chat"/"Conversations"/...),
+   draw avatar + name on its wrapper instead. Targets the <span> specifically
+   (not every wrapper child) so the back button PostHog renders next to it, in
+   the restore/ticket-list views, stays visible instead of being hidden with it. */
+#ph-conversations-widget-container
+  > div
+  > div:has(> div:first-of-type > div > button)
+  > div:first-of-type
+  > div:first-child,
+#ph-conversations-widget-container
+  > div
+  > div:has(textarea)
+  > div:first-of-type
+  > div:first-child,
+#ph-conversations-widget-container
+  > div
+  > div:has(input)
+  > div:first-of-type
+  > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px;
+}
+#ph-conversations-widget-container
+  > div
+  > div:has(> div:first-of-type > div > button)
+  > div:first-of-type
+  > div:first-child
+  > span,
+#ph-conversations-widget-container
+  > div
+  > div:has(textarea)
+  > div:first-of-type
+  > div:first-child
+  > span,
+#ph-conversations-widget-container
+  > div
+  > div:has(input)
+  > div:first-of-type
+  > div:first-child
+  > span {
+  display: none !important;
+}
+#ph-conversations-widget-container
+  > div
+  > div:has(> div:first-of-type > div > button)
+  > div:first-of-type
+  > div:first-child::before,
+#ph-conversations-widget-container
+  > div
+  > div:has(textarea)
+  > div:first-of-type
+  > div:first-child::before,
+#ph-conversations-widget-container
+  > div
+  > div:has(input)
+  > div:first-of-type
+  > div:first-child::before {
+  content: "";
+  display: inline-block;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  background: #ceeeac
+    url("data:image/jpeg;base64,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")
+    center / cover no-repeat;
+}
+#ph-conversations-widget-container
+  > div
+  > div:has(> div:first-of-type > div > button)
+  > div:first-of-type
+  > div:first-child::after,
+#ph-conversations-widget-container
+  > div
+  > div:has(textarea)
+  > div:first-of-type
+  > div:first-child::after,
+#ph-conversations-widget-container
+  > div
+  > div:has(input)
+  > div:first-of-type
+  > div:first-child::after {
+  content: "Jessica from quso";
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+/* Sender label above support messages: "Support" -> "Jessica" */
+#ph-conversations-widget-container
+  div[style*="font-size: 10px"][style*="margin-bottom: 4px"] {
+  font-size: 0 !important;
+}
+#ph-conversations-widget-container
+  div[style*="font-size: 10px"][style*="margin-bottom: 4px"]::after {
+  content: "Jessica";
+  font-size: 11px;
+  color: #6b6b63;
+}
+/* Customer bubbles + send button: charcoal */
+#ph-conversations-widget-container textarea + button,
+#ph-conversations-widget-container
+  [style*="align-self: flex-end"]
+  > div[style*="border-radius"] {
+  background: linear-gradient(#3a3a33, #252521) !important;
+  color: #fff !important;
+  border-color: #252521 !important;
+}
+#ph-conversations-widget-container
+  [style*="align-self: flex-end"]
+  > div[style*="border-radius"]
+  * {
+  color: inherit !important;
+}
+#ph-conversations-widget-container textarea + button {
+  border-radius: 10px !important;
+}
+#ph-conversations-widget-container textarea + button:disabled {
+  opacity: 0.5 !important;
+}
+/* Composer: rounded, soft, quiet charcoal focus ring */
+#ph-conversations-widget-container textarea {
+  border-radius: 10px !important;
+  border: 1px solid #e3e3dc !important;
+  padding: 10px 12px !important;
+  resize: none !important;
+  background: #fafaf7 !important;
+}
+#ph-conversations-widget-container textarea:focus,
+#ph-conversations-widget-container textarea:focus-visible {
+  border-color: #252521 !important;
+  outline: none !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 3px rgba(37, 37, 33, 0.08) !important;
+}
