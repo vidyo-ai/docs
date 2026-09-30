@@ -29,7 +29,7 @@
         {
           "anchor": "Contact Us",
           "icon": "headset",
-          "href": "https://qusoai.frontkb.com/en/contact-us"
+          "href": "mailto:help@quso.ai"
         }
       ]
     },
@@ -126,7 +126,7 @@
     "links": [
       {
         "label": "Contact Us",
-        "href": "https://qusoai.frontkb.com/en/contact-us"
+        "href": "mailto:help@quso.ai"
       }
     ],
     "primary": {
@@ -137,8 +137,14 @@
   },
   "footer": {
     "socials": {
-            "x": "https://x.com/qusoai",
-            "linkedin": "https://linkedin.com/company/quso-ai"
+      "x": "https://x.com/qusoai",
+      "linkedin": "https://linkedin.com/company/quso-ai"
+    }
+  },
+  "integrations": {
+    "posthog": {
+      "apiKey": "phc_qt4cRzJwcUQhs7iZjauFenEikPfGsRWnjxQDxdZkfi4w",
+      "apiHost": "https://d.quso.ai"
     }
   }
 }
