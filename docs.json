@@ -69,6 +69,7 @@
           {
             "group": "Customize Your Clips",
             "pages": [
+              "help/editor/ai-headline",
               "help/editor/add-music-to-clips",
               "help/custom-clip-timestamp",
               "help/custom-clip-transcript",
