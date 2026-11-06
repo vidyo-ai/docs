@@ -62,6 +62,7 @@
             "group": "Importing Your Video",
             "pages": [
               "help/video-import-source",
+              "help/youtube-auto-import",
               "help/video-length-types",
               "help/video-languages-supported"
             ]
@@ -95,11 +96,19 @@
               "help/connect-instagram-account",
               "help/connect-youtube-account",
               "help/connect-twitter-account",
+              "help/connect-bluesky-account",
+              "help/connect-threads-account",
+              "help/connect-telegram-account",
+              "help/connect-reddit-account",
+              "help/connect-snapchat-account",
               "help/publish-external-content",
               "help/send-post-for-approval",
               "help/how-to-bulk-publish",
               "help/what-is-a-social-set",
               "help/how-to-post-instagram-carousel",
+              "help/post-instagram-facebook-stories",
+              "help/post-tiktok-photos",
+              "help/post-as-a-thread",
               "help/social-media-troubleshooting"
             ]
           },
