@@ -43,16 +43,19 @@
               "help/welcome-to-qusoai",
               "help/setup-account",
               "help/how-credits-work",
-              "help/general-faq"
+              "help/general-faq",
+              "help/use-quso-ai-on-mobile"
             ]
           },
           {
             "group": "Top Features",
             "pages": [
               "help/what-is-ai-clips",
-              "help/what-is-ai-influencer",
-              "help/what-is-ai-video",
-              "help/how-to-use-ai-video-generator",
+              "help/how-to-use-ai-clips",
+              "help/how-many-clips",
+              "help/virality-scrore",
+              "help/ai-captions",
+              "help/how-to-use-ai-writer",
               "help/what-is-viddy",
               "help/what-is-cutmagic",
               "help/new-cut-magic"
@@ -73,8 +76,42 @@
               "help/editor/add-music-to-clips",
               "help/custom-clip-timestamp",
               "help/custom-clip-transcript",
-              "help/what-is-cutmagic",
+              "help/brand-kit-templates",
               "help/editor-faq"
+            ]
+          },
+          {
+            "group": "Video Editor",
+            "pages": [
+              "help/editor/how-does-the-timeline-work",
+              "help/editor/timeline-zoom",
+              "help/editor/add-segment",
+              "help/editor/cut-segment-from-video",
+              "help/editor/transcript-based-editor",
+              "help/editor/change-or-correct-captions",
+              "help/editor/change-caption-style-font-effects",
+              "help/editor/change-captions-animation",
+              "help/editor/add-emoji-to-captions",
+              "help/editor/add-sound-to-caption",
+              "help/editor/how-to-export-transcript",
+              "help/editor/filler-word-and-silence-removal",
+              "help/editor/change-video-size-or-aspect-ratio",
+              "help/editor/change-video-position",
+              "help/editor/change-video-zoom",
+              "help/editor/using-split-layout",
+              "help/editor/how-to-use-timeline-with-CutMagic",
+              "help/editor/add-text-overlay-to-video",
+              "help/editor/change-text-style-and-effects",
+              "help/editor/add-background-to-clips",
+              "help/editor/add-logo-to-video",
+              "help/editor/add-outro-to-video",
+              "help/editor/add-progress-bar",
+              "help/editor/add-broll-to-video",
+              "help/editor/what-is-a-video-template",
+              "help/editor/using-preset-templates",
+              "help/editor/create-your-brand-template",
+              "help/editor/save-video-as-draft",
+              "help/editor/how-to-use-ai-description"
             ]
           },
           {
@@ -104,6 +141,24 @@
             ]
           },
           {
+            "group": "Plan, Automate & Measure",
+            "pages": [
+              "help/tiktok-auto-post",
+              "help/content-planner",
+              "help/social-media-analytics"
+            ]
+          },
+          {
+            "group": "Publishing Troubleshooting",
+            "pages": [
+              "help/publish-to-socials-troubleshooting/facebook-instagram-troubleshooting",
+              "help/publish-to-socials-troubleshooting/reauthorize-facebook",
+              "help/publish-to-socials-troubleshooting/linkedin-troubleshooting",
+              "help/publish-to-socials-troubleshooting/tiktok-troubleshooting",
+              "help/publish-to-socials-troubleshooting/youtube-troubleshooting"
+            ]
+          },
+          {
             "group": "Accounts, Billing & Subscriptions",
             "pages": [
               "help/subscription-plans",
@@ -111,7 +166,17 @@
               "help/storage-management",
               "help/download-invoice",
               "help/login-options",
-              "help/payment-billing"
+              "help/payment-billing",
+              "help/delete-account"
+            ]
+          },
+          {
+            "group": "Retired Features",
+            "pages": [
+              "help/what-is-ai-influencer",
+              "help/how-to-use-ai-influencer",
+              "help/what-is-ai-video",
+              "help/how-to-use-ai-video-generator"
             ]
           }
         ]
