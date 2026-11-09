@@ -52,7 +52,9 @@ A quso.ai page opens. Sign in, check the workspace shown next to **Connecting wo
 
 ## Connect ChatGPT
 
-ChatGPT decides which plans and roles can add a custom server. In a Business workspace, an admin or owner adds it. If you don't see **Add custom MCP server**, your ChatGPT plan or workspace doesn't allow it yet.
+<Note>
+  OpenAI offers custom servers with full access on ChatGPT **Business**, **Enterprise** and **Edu**, on the web. In a Business workspace, only an admin or owner can add one. ChatGPT **Pro** can connect with read and fetch permissions only, so it can't import or post. Other ChatGPT plans aren't supported. See [OpenAI's article](https://help.openai.com/en/articles/12584461) for the current rules.
+</Note>
 
 ### Step 1: Open Plugins
 
@@ -60,7 +62,7 @@ Go to [chatgpt.com/plugins](https://chatgpt.com/plugins), select the plus button
 
 ### Step 2: Enter the address
 
-Name it `quso.ai`, paste the address above as the public endpoint, and choose OAuth for authentication. Review the warning, select **I understand and want to continue**, then **Create as a plugin**.
+Name it `quso.ai`, paste the address above under **Connection**, and choose OAuth for authentication. Review the warning, select **I understand and want to continue**, then **Create as a plugin**. Review the tools it finds and install the plugin.
 
 ### Step 3: Sign in and allow
 
@@ -68,7 +70,9 @@ A quso.ai page opens. Sign in, check the workspace shown next to **Connecting wo
 
 ### Step 4: Use it in a chat
 
-In a new chat, type `@quso` and pick quso.ai from the list, then ask for what you want.
+In a new chat, type `@quso` and pick quso.ai from the list, then ask for what you want. ChatGPT uses quso.ai only in the message where you pick it, so `@quso` again when a follow-up needs new data or another action.
+
+To give other members access, an admin or owner publishes the app for the workspace. Members then find it in **Settings → Plugins**.
 
 ---
 
@@ -111,7 +115,7 @@ You can also remove it in the AI app: **Customize → Connectors** in Claude, or
     Your account can't connect yet. Connecting is for paid plans, and we're adding paid accounts in stages. If you're on Free or Pay as you go, [choose a paid plan](/help/subscription-plans).
   </Accordion>
   <Accordion title="My AI app doesn't use quso.ai">
-    Name quso.ai in your request. In ChatGPT, type `@quso` and pick it from the list. In Claude, check that the connector is turned on for this chat.
+    In ChatGPT, type `@quso` and pick it from the list, in each message that needs it. In Claude, name quso.ai in your request and check that the connector is turned on for this chat.
   </Accordion>
   <Accordion title="The clip panel doesn't open">
     Ask for it by name, for example "show my top clips from [project] in the clip panel". If it still doesn't open, start a new chat and ask again.
