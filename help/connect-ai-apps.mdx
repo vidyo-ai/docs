@@ -1,0 +1,134 @@
+---
+title: "Use quso.ai in Claude and ChatGPT"
+description: "Connect quso.ai to Claude or ChatGPT, then import videos, watch your best clips and post or schedule them from the chat. Available on paid plans."
+---
+
+Connect quso.ai to **Claude** or **ChatGPT** and work on your videos from the chat. Import a video, watch your best clips in a panel inside the chat, and post or schedule them.
+
+<Note>
+  Connecting an AI app is available on paid plans. **Free** and **Pay as you go** can't connect. We're adding paid accounts in stages, so yours may not be included yet.
+</Note>
+
+---
+
+## Your connection address
+
+You add quso.ai to your AI app with this address:
+
+```text
+https://mcp.quso.ai/mcp
+```
+
+---
+
+## Connect Claude
+
+### Step 1: Open Connectors
+
+In Claude on the web, go to **Customize → Connectors**.
+
+### Step 2: Add a custom connector
+
+Click **Add**, then **Add custom connector**. Name it `quso`, paste the address above and follow the prompts.
+
+### Step 3: Sign in and allow
+
+A quso.ai page opens. Sign in, check the workspace shown next to **Connecting workspace**, and click **Allow**.
+
+<Tip>
+  Once you've connected on the web, quso.ai also works in the Claude app on iPhone.
+</Tip>
+
+<AccordionGroup>
+  <Accordion title="Using Claude on a Team or Enterprise plan">
+    An owner adds the connector once, in **Organization settings → Connectors**: click **Add**, choose **Custom**, then **Web**. Each member then connects with their own quso.ai account.
+  </Accordion>
+  <Accordion title="Using Claude's Free plan">
+    Claude's Free plan allows one custom connector. If you've already added one, remove it first.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Connect ChatGPT
+
+<Note>
+  OpenAI offers custom servers with full access on ChatGPT **Business**, **Enterprise** and **Edu**, on the web. In a Business workspace, only an admin or owner can add one. ChatGPT **Pro** can connect with read and fetch permissions only, so it can't import or post. Other ChatGPT plans aren't supported. See [OpenAI's article](https://help.openai.com/en/articles/12584461) for the current rules.
+</Note>
+
+### Step 1: Open Plugins
+
+Go to [chatgpt.com/plugins](https://chatgpt.com/plugins), select the plus button, then **Add custom MCP server**.
+
+### Step 2: Enter the address
+
+Name it `quso`, paste the address above under **Connection**, and choose OAuth for authentication. Review the warning, select **I understand and want to continue**, then **Create as a plugin**. Review the tools it finds and install the plugin.
+
+### Step 3: Sign in and allow
+
+A quso.ai page opens. Sign in, check the workspace shown next to **Connecting workspace**, and click **Allow**.
+
+### Step 4: Use it in a chat
+
+In a new chat, type `@quso` and pick quso from the list, then ask for what you want. ChatGPT uses quso.ai only in the message where you pick it, so `@quso` again when a follow-up needs new data or another action.
+
+To give other members access, an admin or owner publishes the app for the workspace. Members then find it in **Settings → Plugins**.
+
+---
+
+## What to ask
+
+| Ask | What happens |
+| --- | --- |
+| "Import this video: [your link]" | quso.ai imports the video and finds your clips. Your AI app should check with you first, because importing uses credits. |
+| "Show me the top clips from my project [name] in the clip panel" | A panel opens in the chat, where you can play each clip with its crop and captions and post it. |
+| "Post the best clip to YouTube tomorrow at 9 am" | Your AI app picks the clip, writes a caption and schedules the post after you confirm. |
+| "What's scheduled this week?" | You get a list of your posts. You can ask to cancel one or move it to another time. |
+| "How many credits do I have left?" | You get your plan's remaining credits. |
+
+---
+
+## Credits and posting
+
+**Credits.** Importing a video uses [credits](/help/how-credits-work), the same as importing on quso.ai. Watching clips in the panel and rendering a clip don't use credits.
+
+**Posts are public.** Ask your AI app to show you the caption and the time before it posts. Your AI app may also ask you to approve an action before it runs.
+
+**Accounts.** Your AI app posts to the accounts you've [linked in quso.ai](/help/add-social-media-accounts). If an account isn't linked yet, ask your AI app for a link to connect it.
+
+**Networks.** Plans with social scheduling, such as **Essential** and **Growth**, can post to YouTube, TikTok, Instagram, Facebook, LinkedIn, X, Bluesky, Threads, Telegram, Reddit and Snapchat. **Lite** and **Plus** can post to TikTok only. Pinterest isn't available from AI apps yet. See [plans](/help/subscription-plans).
+
+---
+
+## Disconnect an AI app
+
+In quso.ai, go to **Settings → Connected apps** and click **Revoke** next to the app. The app loses access to your account straight away.
+
+You can also remove it in the AI app: **Customize → Connectors** in Claude, or **Settings → Plugins → Uninstall** in ChatGPT.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="It says connecting AI apps is invite-only">
+    Your account can't connect yet. Connecting is for paid plans, and we're adding paid accounts in stages. If you're on Free or Pay as you go, [choose a paid plan](/help/subscription-plans).
+  </Accordion>
+  <Accordion title="My AI app doesn't use quso.ai">
+    In ChatGPT, type `@quso` and pick it from the list, in each message that needs it. In Claude, name quso.ai in your request and check that the connector is turned on for this chat.
+  </Accordion>
+  <Accordion title="The clip panel doesn't open">
+    Ask for it by name, for example "show my top clips from [project] in the clip panel". If it still doesn't open, start a new chat and ask again.
+  </Accordion>
+  <Accordion title="It says the clip wasn't posted because of my template">
+    Clips posted straight from an AI app use quso.ai's standard look. If your workspace has a different default 9:16 template, quso.ai stops before posting. To keep your template, export the clip from the editor and ask your AI app to post that render. To post the standard look anyway, ask your AI app to render the clip, check it, then post that render.
+  </Accordion>
+</AccordionGroup>
+
+For every tool, the limits on each connection, more fixes and what data the AI app gets, see [quso.ai in AI apps: tools, limits and your data](/help/ai-apps-tools-and-limits).
+
+---
+
+### Need Help?
+
+If you run into any issues or have questions, our support team at [help@quso.ai](mailto:help@quso.ai) is just a message away.

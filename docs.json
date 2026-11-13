@@ -48,6 +48,13 @@
             ]
           },
           {
+            "group": "Use quso.ai in AI Apps",
+            "pages": [
+              "help/connect-ai-apps",
+              "help/ai-apps-tools-and-limits"
+            ]
+          },
+          {
             "group": "Top Features",
             "pages": [
               "help/what-is-ai-clips",

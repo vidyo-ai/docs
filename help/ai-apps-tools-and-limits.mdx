@@ -1,0 +1,211 @@
+---
+title: "quso.ai in AI apps: tools, limits and your data"
+description: "What quso.ai can do in Claude and ChatGPT, the limits on each connection, how to fix common problems, what data the AI app gets, and how to disconnect."
+---
+This article explains what quso.ai can do after you connect it to an AI app such as Claude or ChatGPT. To connect for the first time, see [Use quso.ai in Claude and ChatGPT](/help/connect-ai-apps).
+
+---
+
+## What the connector does
+
+The quso.ai connector lets your AI app work with your quso.ai account. You can ask it to:
+
+- import a video from a link, or upload a file, and make clips from it;
+- find clips about a topic and show them in a panel inside the chat;
+- render a clip as a vertical video and give you the download link;
+- post or schedule a clip, a finished render, your own video or images, or a text post to your connected social accounts;
+- list, cancel or move your scheduled posts.
+
+The connector works in one quso.ai workspace: the one shown on the quso.ai page when you connected.
+
+---
+
+## Who can connect
+
+- Connecting an AI app needs a quso.ai account on a paid plan. **Free** and **Pay as you go** accounts can't connect.
+- We're adding paid accounts in stages, so your account may not be included yet.
+- What you can do also depends on your plan:
+  - Plans with social scheduling (such as **Essential** and **Growth**) can post to 11 networks, now or at a set time, and can see post history.
+  - Plans without scheduling (such as **Lite** and **Plus**) post to TikTok only, straight away.
+  - Posting your own video or images, and text posts, work on the plans that can [publish external content](/help/publish-external-content) on quso.ai.
+  - Downloading a rendered video needs a paid plan. If your plan ends, the connection stays until you revoke it, and the free plan's limits apply to it.
+
+Using quso.ai from an AI app costs the same as using quso.ai on the web. Importing a video uses [credits](/help/how-credits-work), 1 credit for each minute of video. Your AI app may call them "processing minutes". Watching clips in the panel, rendering a clip and posting don't use credits.
+
+---
+
+## The tools
+
+Your AI app chooses which tool to use. You don't need to name the tools. This list helps you understand what the app is doing.
+
+### Your account
+
+| Tool | What it does |
+| --- | --- |
+| `whoami` | Shows which quso.ai account, workspace and plan the connection uses. |
+| `get_usage` | Shows how many credits your plan has left, and the longest video you can import now. |
+
+### Projects and clips
+
+| Tool | What it does |
+| --- | --- |
+| `list_projects` | Lists the videos in your workspace, newest first, with the stage of each (for example, transcribing or clips ready). |
+| `get_project` | Shows one project and, when it's ready, its clips: title, score, summary, hook line and transcript excerpt. It can wait for processing to finish. |
+| `search_clips` | Finds clips about a topic in your 50 newest projects, by matching words. |
+| `get_transcript` | Gives the words of a transcript with their times, for one clip or for the whole video. |
+
+### Bringing in a video
+
+| Tool | What it does |
+| --- | --- |
+| `import_media` | Imports a video from a public link and starts making clips. Uses credits. Links from YouTube, Google Drive, Zoom, Vimeo, X, Facebook, Twitch, Rumble, Loom, LinkedIn and Dropbox work. Private, removed and live videos are refused. |
+| `create_upload`, `complete_upload` | Upload a video or audio file from your computer, up to 2 GB. For AI apps that can run commands, such as Claude Code or Cursor. Uses credits. |
+| `pick_file` | Opens a panel in the chat where you choose a file from your phone or computer. Uses credits only when you start the upload. |
+
+### Rendering
+
+| Tool | What it does |
+| --- | --- |
+| `render_clip` | Makes a vertical 9:16 video (1080 x 1920) of one clip, with animated captions and, if you want, a title over the first 5 seconds. You can change the caption style, remove filler words or trim the clip. Doesn't use credits. |
+| `get_render` | Shows whether a render is done, and gives its download link. Anyone who has the link can open the video. |
+| `list_renders` | Lists a project's renders, including videos you exported in the quso.ai editor. |
+
+### Social accounts
+
+| Tool | What it does |
+| --- | --- |
+| `list_social_accounts` | Shows the social accounts you can post to, and each network's caption and video limits. |
+| `connect_social_accounts` | Gives you a link to connect a social account. Getting the link posts nothing. Don't share the link: anyone who opens it in the next few minutes can connect accounts to your workspace. |
+
+### Posting
+
+These tools post in public. Your AI app should show you the caption, the account and the time, and wait for your yes.
+
+| Tool | What it does |
+| --- | --- |
+| `publish_clip` | Renders a clip and posts it, now or at a set time. |
+| `publish_render` | Posts a finished render as it is, such as a video exported from the quso.ai editor. Plans with scheduling only. |
+| `create_media_upload`, `publish_media` | Post your own video (.mp4 or .mov, up to 1 GB) or images (.jpg, .png or .gif, up to 20 MB each). The upload step is for AI apps that can run commands. |
+| `publish_text` | Posts text with no video to Facebook, LinkedIn, X, Bluesky, Threads, Telegram or Reddit. |
+
+You can post to YouTube, TikTok, Instagram, Facebook, LinkedIn, X, Bluesky, Threads, Telegram, Reddit and Snapchat. Pinterest isn't available from AI apps.
+
+If you ask for the same post twice within a day, quso.ai returns the first post instead of posting again.
+
+### Managing posts
+
+| Tool | What it does |
+| --- | --- |
+| `list_posts` | Lists your scheduled, published or failed posts. Plans with scheduling only. |
+| `get_post` | Shows one post's status, and the link to it once it's published. |
+| `cancel_post` | Stops a post that hasn't gone out yet. This can't be undone. |
+| `reschedule_post` | Moves a scheduled post to a new time. The video and caption stay the same. |
+
+### The clip panel
+
+| Tool | What it does |
+| --- | --- |
+| `show_clips` | Opens a panel in the chat. You can watch each clip with its crop, scene changes and captions, edit the caption and post it. A post from the panel needs your tap. |
+| `clip_preview` | Used by the panel itself to load one clip. Your AI app doesn't call it. |
+
+---
+
+## Limits
+
+### Limits on each connection
+
+These limits protect quso.ai from runaway requests. Each connection has its own count, so Claude and ChatGPT count separately. A count starts at the first call and resets when its time window ends.
+
+| What you're doing | Tools | Limit |
+| --- | --- | --- |
+| Looking things up | `get_usage`, `list_projects`, `get_project`, `search_clips`, `get_transcript`, `get_render`, `list_renders`, `list_social_accounts`, `list_posts`, `get_post`, `show_clips`, `clip_preview`, `pick_file` | 600 calls every 10 minutes |
+| Importing and uploading | `import_media`, `create_upload`, `complete_upload` | 20 calls every hour |
+| Rendering, and posting a clip | `render_clip`, `publish_clip` | 30 calls every hour |
+| Rendering the same clip again | `render_clip`, `publish_clip` for one clip | 5 renders of that clip every hour |
+| Posting and changing posts | `publish_render`, `publish_text`, `create_media_upload`, `publish_media`, `cancel_post`, `reschedule_post` | 30 calls every hour |
+| Getting a link to connect a social account | `connect_social_accounts` | 30 links every hour |
+
+`whoami` has no limit. To see every limit and how much of it is left, ask for your usage: `get_usage` lists each limit, how many calls are left, and when it resets.
+
+When you reach a limit, the tool answers with "too many ... on this connection", the limit, the number of seconds to wait and the time it lifts. Wait until then, and ask again. Nothing was imported, rendered or posted by the refused call.
+
+
+### Other limits
+
+- **Video length.** You can import a video up to the length your credits allow. `get_usage` gives the exact maximum. See also [Video length & types](/help/video-length-types).
+- **Clip length.** A render can be at most 30 minutes long.
+- **Format.** Renders are vertical 9:16 only. For other formats or layouts, open the clip in the quso.ai editor.
+- **Upload links.** A file upload link works for 1 hour. A link to upload your own media for posting works for 15 minutes.
+- **Scheduling.** A scheduled post must be at least 15 minutes ahead and at most 1 year ahead.
+- **Moving a post.** You can't move a post that's due in the next 5 minutes.
+- **Waiting.** When your AI app waits for a project, render or post, each check waits up to 25 seconds. Your AI app checks again until it's done.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="It says my account isn't invited to connect AI apps">
+    Your account can't connect yet. Connecting is for paid plans, and we're adding paid accounts in stages. Free and Pay as you go accounts can't connect.
+  </Accordion>
+  <Accordion title="It says my plan couldn't be read, or my account is still being set up">
+    This is temporary. Wait a few seconds and try to connect again.
+  </Accordion>
+  <Accordion title="The quso.ai page warns that the app is unverified">
+    The quso.ai page shows this when the app that asked to connect isn't one we recognize. Continue only if you started the connection yourself, from the app you meant to connect.
+  </Accordion>
+  <Accordion title="It connected to the wrong workspace">
+    The connection uses the workspace you last signed in to on quso.ai. Revoke the connection (see below), open the workspace you want on quso.ai, then connect again from your AI app.
+  </Accordion>
+  <Accordion title="The clip panel doesn't load after an update">
+    After we update quso.ai, your AI app may keep an old copy of the panel. Refresh the connector's tools, then start a new chat:
+    - **ChatGPT:** go to **Settings → Plugins**, open quso, and select **Refresh tools**.
+    - **Claude:** go to **Customize → Connectors**, open quso, open its **⋯** menu and select **Refresh tools list**.
+  </Accordion>
+  <Accordion title="My AI app doesn't use quso.ai">
+    In ChatGPT, type `@quso` and pick it from the list, in each message that needs it. In Claude, name quso.ai in your request and check that the connector is turned on for this chat.
+  </Accordion>
+  <Accordion title="It says I reached a limit (rate_limited)">
+    See [Limits on each connection](#limits-on-each-connection). Wait the number of seconds in the message, then ask again.
+  </Accordion>
+  <Accordion title="It says my plan has no credits left (limit_reached)">
+    The video is longer than your remaining credits allow. Ask for your remaining credits, or choose a shorter video. See [How credits work](/help/how-credits-work).
+  </Accordion>
+  <Accordion title="It says the clip wasn't posted because of my template (template_not_supported)">
+    Clips posted straight from an AI app use quso.ai's standard look. If your workspace has a different default 9:16 template, quso.ai stops before posting. To keep your template, export the clip from the editor and ask your AI app to post that render. To post the standard look anyway, ask your AI app to render the clip, check it, then post that render.
+  </Accordion>
+  <Accordion title="It says the clip was already posted (already_posted)">
+    The clip already went out, or is scheduled, on that network. Nothing new was posted. If you want to post it again, say so, and your AI app can post it again.
+  </Accordion>
+  <Accordion title="A social account is missing">
+    Ask your AI app for a link to connect it, or connect it in quso.ai. See [Link my social media accounts](/help/add-social-media-accounts).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Your data
+
+- Your AI app sends quso.ai only what it puts in a request: links, files, which clip to use, captions, titles, networks and times. quso.ai doesn't ask the AI app for your chat history.
+- quso.ai sends your AI app what it needs to answer: your account email and workspace name, project and clip details, transcript text, render download links, your social account names and your post status. The AI app's own privacy policy covers that data once it has it.
+- For each request we record the tool name, the result and IDs (your user, workspace and connection), not your captions or links. See our [Privacy Policy](https://quso.ai/privacy-policy).
+
+---
+
+## Disconnect an AI app
+
+In quso.ai, go to **Settings → Connected apps** and click **Revoke** next to the app. The app loses access to your account straight away.
+
+You can also remove it in the AI app: **Customize → Connectors** in Claude, or **Settings → Plugins → Uninstall** in ChatGPT.
+
+Disconnecting doesn't delete anything the AI app already received. Delete it in the AI app.
+
+---
+
+## Report a security problem
+
+If you find a security problem in the quso.ai connector, email [help@quso.ai](mailto:help@quso.ai) with "Security" in the subject. Don't include passwords or tokens in your email.
+
+### Need Help?
+
+If you run into any issues or have questions, our support team at [help@quso.ai](mailto:help@quso.ai) is just a message away.
