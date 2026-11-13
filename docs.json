@@ -50,7 +50,8 @@
           {
             "group": "Use quso.ai in AI Apps",
             "pages": [
-              "help/connect-ai-apps"
+              "help/connect-ai-apps",
+              "help/ai-apps-tools-and-limits"
             ]
           },
           {
