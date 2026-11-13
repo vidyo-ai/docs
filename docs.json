@@ -85,6 +85,7 @@
             "group": "Video Editor",
             "pages": [
               "help/editor/editor-layout",
+              "help/editor/edit-with-ai-prompt-bar",
               "help/editor/how-does-the-timeline-work",
               "help/editor/timeline-zoom",
               "help/editor/add-segment",
