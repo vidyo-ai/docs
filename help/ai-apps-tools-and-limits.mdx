@@ -22,11 +22,12 @@ The connector works in one quso.ai workspace: the one shown on the quso.ai page 
 
 ## Who can connect
 
-- Connecting an AI app needs a quso.ai account on a paid plan. **Free** and **Pay as you go** accounts can't connect.
-- We're adding paid accounts in stages, so your account may not be included yet.
+- Any quso.ai account can connect an AI app, including **Free** and **Pay as you go**.
 - What you can do also depends on your plan:
   - Plans with social scheduling (such as **Essential** and **Growth**) can post to 11 networks, now or at a set time, and can see post history.
   - Plans without scheduling (such as **Lite** and **Plus**) post to TikTok only, straight away.
+  - **Free** posts to TikTok only, straight away, with the quso.ai watermark and a short quso.ai line in the caption.
+  - **Pay as you go** imports with credits from the packs you buy, so buy a pack before your first import.
   - Posting your own video or images, and text posts, work on the plans that can [publish external content](/help/publish-external-content) on quso.ai.
   - Downloading a rendered video needs a paid plan. If your plan ends, the connection stays until you revoke it, and the free plan's limits apply to it.
 
@@ -66,7 +67,7 @@ Your AI app chooses which tool to use. You don't need to name the tools. This li
 
 | Tool | What it does |
 | --- | --- |
-| `render_clip` | Makes a vertical 9:16 video (1080 x 1920) of one clip, with animated captions and, if you want, a title over the first 5 seconds. You can change the caption style, remove filler words or trim the clip. Doesn't use credits. |
+| `render_clip` | Makes a vertical 9:16 video (1080 x 1920) of one clip, with animated captions and, if you want, a title over the first 5 seconds. You can change the caption style, remove filler words or trim the clip. Doesn't use credits. Not on **Free**: there, `publish_clip` posts the clip to TikTok instead. |
 | `get_render` | Shows whether a render is done, and gives its download link. Anyone who has the link can open the video. |
 | `list_renders` | Lists a project's renders, including videos you exported in the quso.ai editor. |
 
@@ -83,7 +84,7 @@ These tools post in public. Your AI app should show you the caption, the account
 
 | Tool | What it does |
 | --- | --- |
-| `publish_clip` | Renders a clip and posts it, now or at a set time. |
+| `publish_clip` | Renders a clip and posts it, now or at a set time. On **Free**, **Lite** and **Plus**: TikTok only, straight away. |
 | `publish_render` | Posts a finished render as it is, such as a video exported from the quso.ai editor. Plans with scheduling only. |
 | `create_media_upload`, `publish_media` | Post your own video (.mp4 or .mov, up to 1 GB) or images (.jpg, .png or .gif, up to 20 MB each). The upload step is for AI apps that can run commands. |
 | `publish_text` | Posts text with no video to Facebook, LinkedIn, X, Bluesky, Threads, Telegram or Reddit. |
@@ -145,9 +146,6 @@ When you reach a limit, the tool answers with "too many ... on this connection",
 ## Troubleshooting
 
 <AccordionGroup>
-  <Accordion title="It says my account isn't invited to connect AI apps">
-    Your account can't connect yet. Connecting is for paid plans, and we're adding paid accounts in stages. Free and Pay as you go accounts can't connect.
-  </Accordion>
   <Accordion title="It says my plan couldn't be read, or my account is still being set up">
     This is temporary. Wait a few seconds and try to connect again.
   </Accordion>
@@ -169,7 +167,7 @@ When you reach a limit, the tool answers with "too many ... on this connection",
     See [Limits on each connection](#limits-on-each-connection). Wait the number of seconds in the message, then ask again.
   </Accordion>
   <Accordion title="It says my plan has no credits left (limit_reached)">
-    The video is longer than your remaining credits allow. Ask for your remaining credits, or choose a shorter video. See [How credits work](/help/how-credits-work).
+    The video is longer than your remaining credits allow. Ask for your remaining credits, or choose a shorter video. On Pay as you go, buy a credit pack in quso.ai first. See [How credits work](/help/how-credits-work).
   </Accordion>
   <Accordion title="It says the clip wasn't posted because of my template (template_not_supported)">
     Clips posted straight from an AI app use quso.ai's standard look. If your workspace has a different default 9:16 template, quso.ai stops before posting. To keep your template, export the clip from the editor and ask your AI app to post that render. To post the standard look anyway, ask your AI app to render the clip, check it, then post that render.
