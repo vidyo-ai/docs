@@ -1,6 +1,6 @@
 ---
 title: "Edit with AI"
-description: "Tell quso.ai what to change in plain words, like cut the long pauses or add chill music, and the editor makes the edit. Undo any change in one step."
+description: "Tell quso.ai what to change in plain words, like cut the long pauses, make it 16:9 or split screen, and the editor makes the edit. Undo any change in one step."
 ---
 
 **Edit with AI** lets you change a clip by typing what you want, the way you'd ask a video editor. Type "cut the long pauses" or "add a hook at the start", and quso.ai makes the edit in the editor for you. You can see it right away, keep it, or undo it.
@@ -50,6 +50,9 @@ When you click into the bar with nothing typed, it suggests a few edits that fit
 | **Hook or call to action:** text written for you, in a readable box | "add a hook at the start", "add a follow CTA at the end" |
 | **Background music** from the quso.ai music library, by mood, and its volume | "add some chill music", "make the music quieter", "remove the music" |
 | **Zoom** the whole clip in or out | "zoom in a bit", "reset the zoom" |
+| **Aspect ratio:** vertical 9:16, square 1:1 or landscape 16:9 | "make it 16:9 for YouTube", "make it square" |
+| **Layout** of the people and the screen, on clips framed by [CutMagic](/help/what-is-cutmagic) | "split screen", "gameplay on top, my face below", "show the whole video" |
+| **B-roll:** stock footage where your words call for it, on plans with Auto B-roll | "add some b-roll", "remove the b-roll" |
 | **Progress bar** | "add a progress bar" |
 | **Background color** and the on-video **title** | "black background", "turn off the title" |
 | **Export speed** | "speed it up" (faster than 1× is on paid plans) |
@@ -62,6 +65,37 @@ When you click into the bar with nothing typed, it suggests a few edits that fit
 
 ---
 
+## Change the aspect ratio or layout
+
+### Aspect ratio
+
+Ask for **9:16**, **1:1** or **16:9** ("make it 16:9 for YouTube") and the clip switches, the same as the aspect ratio buttons at the top of the editor.
+
+![The clip switched to 16:9 after asking the AI bar](/images/ai-prompt-bar-aspect.jpg)
+
+### Layout
+
+On a clip framed by [CutMagic](/help/what-is-cutmagic), describe the layout you want and every scene of the clip switches to it. CutMagic finds the faces and the screen, so each part of the frame stays on the right person.
+
+| You say… | Layout |
+|---|---|
+| "split screen", "show both of us" | **Two Speakers**: one person on top, one below |
+| "gameplay on top, my facecam below" | **Screen + Speaker** |
+| "small round facecam over my screen" | **Screen + Speaker (Bubble)** |
+| "just focus on the speaker" | **Single Speaker** |
+| "show the whole video", "don't crop it" | **Full Frame** |
+| "only the screen" | **Screen Only** |
+
+If CutMagic is off for the clip, the AI turns it on for you. You'll see each scene's new layout in the **CutMagic** tab, where you can still change any scene by hand.
+
+![Every scene set to Two Speakers after asking for a split screen](/images/ai-prompt-bar-layout.jpg)
+
+<Note>
+  Layouts are for vertical 9:16 clips. If you ask for a layout and a square or landscape ratio in the same request, the ratio wins.
+</Note>
+
+---
+
 ## When it can't do something
 
 If you ask for something it can't do yet, the card says so and why, and links to the place in the editor where you can do it yourself. Everything else in your request is still done.
@@ -71,7 +105,8 @@ If you ask for something it can't do yet, the card says so and why, and links to
 Not possible yet:
 
 - A specific song or artist. Music comes from the quso.ai library only. To use your own track, add it from **Media**.
-- Emojis in captions, b-roll, transitions, and zooming in at one moment only.
+- Emojis in captions, transitions, and zooming in at one moment only.
+- Layouts on a clip CutMagic hasn't framed. You can still change the aspect ratio, crop and zoom.
 
 ---
 
@@ -93,6 +128,9 @@ Every request is **one step** in the editor's history:
   </Accordion>
   <Accordion title="Why did it say a part isn't in my clip?">
     It only cuts words it can clearly match to what you described. If that part of the conversation is outside this clip, it tells you instead of cutting something else.
+  </Accordion>
+  <Accordion title="Why can't it change the layout of my clip?">
+    Layouts come from [CutMagic](/help/what-is-cutmagic), which frames each scene when it's turned on at import and the video is landscape. If CutMagic didn't frame the project, the AI tells you instead of guessing where the faces are.
   </Accordion>
   <Accordion title="Why didn't my export come out faster?">
     Faster export speeds are part of paid plans. On the free plan, the AI tells you instead of changing the speed. The preview always plays at normal speed; the speed applies to the downloaded video.
